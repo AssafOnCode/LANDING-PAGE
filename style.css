@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root
+{
+    --UnikColor :beige;
+}
+
+body{
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+    color :rgb(246, 246, 246);
+}
+
+header 
+{
+    background: linear-gradient(#0f2b23, #1e4b3b, #508762);
+}
+
+header nav
+{
+padding: 30px 5% 0 5%; /*  padding = espace  30px haut 5% droite 0 bas 5% gauche */
+display: flex; /* permet d'organiser facilement les elements d'un conteneur  */
+flex-wrap: wrap; /* adapte responsive */
+justify-content: space-between; /* espace entre les elements de la nav */
+align-items: center; /* aligne verticalement les elements du conteneur */
+}
+
+header nav h1 
+{
+    margin: 0;
+    text-transform: uppercase;
+    color: var(--UnikColor);
+}
+
+header nav .right 
+{
+    display: flex;
+    align-items: center;
+}
+
+header nav .right p 
+{
+margin: 0 15px 0 0;
+color: white;
+}
+
+header nav .right p:hover 
+{
+    color:var(--UnikColor); 
+    cursor: pointer;
+}
+
+header nav .right button 
+{
+    padding: 5px 15px;
+    font-size: 20 px;
+    background: inherit;
+    border: 1px solid var(--UnikColor ); /* bordure 1px solid est la taille du bordure du button suivi de sa couleur */
+    color: var(--UnikColor);
+    border-radius: 5px; /* arrondi du button */
+    cursor: pointer;
+}
+
+header nav .right button:hover 
+{
+    color:#508762 ;
+    background-color: var(--UnikColor);
+    transition: color 0.5s, background-color 0.5s; /* temps de changement de color */
+}
+ 
+.presentation
+{
+    padding: 30px 5%;
+    margin-top: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between ;
+}
+
+.presentation .product-presentation 
+{
+    width: 100%; /* occupe la à 100% */
+    flex-shrink: 1; /* adapte l'espace en fonction de la place */
+}
+
+.presentation .product-presentation h1
+{
+    margin: 0;
+    font-size: 3vw;
+    width: 80%; /* occupe 80% de l'espace et non la totalité */
+}
+
+.presentation .product-presentation .p
+{
+    font-weight: 300;
+    color: #e9e9e9;
+}
+
+.presentation .product-presentation button 
+{ 
+    margin-top: 20px;
+    padding: 15px 20px;
+    font-size: 15px;
+    border-radius: 10px;
+    border: none; /* enlever la bordure */
+    outline: none; /* enlever la bordure quand le curseur survol */
+    cursor: pointer;
+}
+
+.first .product-presentation button
+{
+    background-color: var(--UnikColor);
+    color:#508762;
+    transition: background-color 0.5s colors 0.5s;
+    border: 1px solid var(--UnikColor);
+
+}
+
+.first .product-presentation button:hover
+{
+     background-color: inherit;  
+     color: var(--UnikColor);
+}
+
+.presentation .image-presentation img 
+{
+    width: 100%;
+}
+
+.first .product-presentation .small-images 
+{
+margin-top: 30px;
+display: flex;
+flex-wrap: wrap;
+align-items: center; 
+}
+
+.first .product-presentation .small-images .small 
+{
+    padding: 20px;
+    background-color:#3e5c50;
+    margin: 0 15px 0;
+    border-radius: 20px;
+    transition: 0.5s;
+} 
+
+.first .product-presentation .small-images .small:hover
+{
+    filter: brightness(50%);
+}
+
+.first .product-presentation .small-images .small img 
+{
+     width :120px
+}
+
+.second
+{
+    margin: 0;
+    background-color:#1a4537;
+}
+
+.second .product-presentation .new 
+{
+    color: var(--UnikColor);
+}
+
+.second .product-presentation .button
+{
+    background-color: var(--UnikColor);
+    color:#1a4537;
+    transition: background-color 0.5s colors 0.5s;
+    border: 1px solid var(--UnikColor);
+}
+
+.second .product-presentation .button:hover
+{
+    background-color: inherit;  
+     color: var(--UnikColor);
+}
+
+@media screen and (max-width: 640px){
+    header nav .right p 
+    {
+        display: none; 
+    } 
+    .presentation .product-presentation h1 
+    {
+        font-size: 2em;
+    }
+    .presentation .image-presentation
+    {
+        display: none; 
+    }
+
+    .first .product-presentation .small-images .small img 
+    {
+        width: 90px;
+    }
+}
